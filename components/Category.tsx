@@ -3,22 +3,29 @@ import React, { useState } from "react";
 import { Card } from "./ui/card";
 import { Text } from "./ui/text";
 import { Image } from "expo-image";
+
 type CategoryProps = {
   id: number;
   name: string;
   image: string;
+  select: number;
+  setSelect: (id: number) => void;
 };
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
-export default function Category({ id, name, image }: CategoryProps) {
-  const [select, setSelect] = useState(1);
+export default function Category({
+  id,
+  name,
+  image,
+  setSelect,
+  select,
+}: CategoryProps) {
   const { width } = Dimensions.get("window");
   const cardSize = width * 0.22; // 22% of screen width
-  console.log("name", name);
   return (
     <Pressable
-      className="items-center"
+      className="mb-3 items-center"
       onPress={() => setSelect(id)}
       onLayout={(event) => {
         const { height } = event.nativeEvent.layout;
@@ -26,6 +33,11 @@ export default function Category({ id, name, image }: CategoryProps) {
       }}
     >
       <Card
+        onLayout={(event) => {
+          const { height, width } = event.nativeEvent.layout;
+          console.log("cardw:", height);
+          console.log("card h :", width);
+        }}
         size="lg"
         className={`items-center rounded-full bg-slate-100 ${select === id ? "border border-orange" : ""}`}
         key={id}
@@ -38,7 +50,10 @@ export default function Category({ id, name, image }: CategoryProps) {
           transition={1000}
         />
       </Card>
-      <Text size="lg" className={`font-poppins mt-4 font-medium text-black`}>
+      <Text
+        size="lg"
+        className={`mt-4 text-black ${select === id ? "font-medium" : ""}`}
+      >
         {name}
       </Text>
     </Pressable>

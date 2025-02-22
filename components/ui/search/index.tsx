@@ -5,7 +5,7 @@ import { SearchIcon } from "../icon";
 
 export default function Search() {
   return (
-    <Input size="xl" className="mt-4 h-16 rounded-lg">
+    <Input size="xl" className="mt-4 h-16 rounded-2xl">
       <InputSlot className="ml-4">
         <InputIcon as={SearchIcon} className="text-orange">
           {/* Some Icon Component */}

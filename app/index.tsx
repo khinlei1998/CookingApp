@@ -1,31 +1,19 @@
 import React, { useEffect } from "react";
-import {
-  View,
-  ScrollView,
-  SafeAreaView,
-  Dimensions,
-  useAnimatedValue,
-} from "react-native";
-import { Image } from "expo-image";
-import { Text } from "@/components/ui/text";
-import { Box } from "@/components/ui/box";
-import { Button, ButtonText } from "@/components/ui/button";
-import { VStack } from "@/components/ui/vstack";
-// import Animated, { FadeInDown } from "react-native-reanimated";
-import { router } from "expo-router";
-import { FadeIn, FadeOut } from "react-native-reanimated";
+import { SafeAreaView, Dimensions } from "react-native";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withTiming,
-  BounceInUp,
-  BounceInDown,
 } from "react-native-reanimated";
-
+import { router } from "expo-router";
+import { Text } from "@/components/ui/text";
+import { Button, ButtonText } from "@/components/ui/button";
+import { VStack } from "@/components/ui/vstack";
+import { Box } from "@/components/ui/box";
+import { Image } from "expo-image";
+const { width, height } = Dimensions.get("window");
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
-const { width, height } = Dimensions.get("window");
-
 export default function onboarding() {
   const opacity = useSharedValue(0); // Initial opacity is 0
   const offset = useSharedValue(-width); // Initial position off-screen to the left
@@ -43,39 +31,37 @@ export default function onboarding() {
     offset.value = withTiming(0, { duration: 2000 }); // Animate to the center in 2 seconds
   }, []);
   return (
-    <SafeAreaView className="flex-1 bg-white">
-      <Animated.Image
-        style={[
-          {
-            width: 420,
-            height: 640,
-            marginTop: 5,
-            alignSelf: "flex-end",
-          },
-          animatedImageStyle,
-        ]}
-        source={require("../data/images/boarding.png")}
-        resizeMode="cover" // Use resizeMode instead of contentFit
+    <Box className="flex-1 items-center justify-center bg-black">
+      {/* Background Image */}
+      <Image
+        className="relative"
+        style={{ width: "100%", height: "90%" }}
+        source={require("../data/images/image1.png")}
+        contentFit="cover"
+        transition={1000}
       />
-      <Animated.View style={animatedStyles}>
-        <VStack space="md" className="px-6">
-          <Text size="4xl" className="font-bold text-green-800">
-            Happy Cooking!
+
+      {/* Overlay & Content */}
+      <Animated.View style={animatedStyles} className="absolute bottom-40">
+        <VStack space="lg">
+          <Text className="text-center text-7xl font-bold text-white">
+            {`Let’s${"\n"}Cooking`}
           </Text>
-          <Text size="2xl" className="text-green-800">
-            This recipe app provides easy recipes for all skill levels!
+          <Text size="2xl" bold className="text-center text-white">
+            Find best recipes for cooking
           </Text>
+
+          <Button
+            size="lg"
+            className="mx-6 mt-6 h-16 w-[250px] rounded-xl bg-red-600"
+            onPress={() => router.push("/(tabs)/(home)")}
+          >
+            <ButtonText className="text-xl font-bold text-white">
+              Get Started →
+            </ButtonText>
+          </Button>
         </VStack>
-        <Button
-          size="lg"
-          className="font-mono mx-6 mt-8 h-14 w-[200px] rounded-lg bg-orange font-bold"
-          onPress={() => router.navigate("/(tabs)/(home)")}
-        >
-          <ButtonText className="font-mono font-bold text-white">
-            Get Started
-          </ButtonText>
-        </Button>
       </Animated.View>
-    </SafeAreaView>
+    </Box>
   );
 }

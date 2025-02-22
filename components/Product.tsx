@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/button";
 import { CategoryList } from "@/data";
 import { router } from "expo-router";
+
 type ProductProps = {
   id: number;
   name: string;
@@ -28,15 +29,7 @@ type ProductProps = {
 };
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
-export default function Product({
-  id,
-  name,
-  categoryId,
-  ingredient,
-  favourite,
-  description,
-  image,
-}: ProductProps) {
+export default function Product({ id, name, categoryId, image }: ProductProps) {
   const category = CategoryList.find((category) => category.id === categoryId);
 
   return (
