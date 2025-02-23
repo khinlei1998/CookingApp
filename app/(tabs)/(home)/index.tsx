@@ -1,4 +1,10 @@
-import { Dimensions, ScrollView, FlatList } from "react-native";
+import {
+  Dimensions,
+  ScrollView,
+  FlatList,
+  View,
+  Pressable,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
@@ -10,6 +16,8 @@ import Title from "@/components/Title";
 import Product from "@/components/Product";
 import { Box } from "@/components/ui/box";
 import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { FlashList } from "@shopify/flash-list";
 
 const { width } = Dimensions.get("window");
 const numColumns = width < 600 ? 2 : width < 768 ? 3 : 4;
@@ -19,15 +27,19 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-white px-5">
-      <HStack className="mt-3 items-center justify-between">
-        <VStack space="md">
-          <Text size="3xl" className="font-bold text-black">
-            {`What would you like \n to cook today?`}
+      <HStack className="mt-5 items-center justify-between">
+        <VStack>
+          <Text
+            size="2xl"
+            className="font-poppins font-bold leading-[40px] text-black"
+          >
+            {/* {`What would you like \n to cook today?`} */}
+            ဒီနေ့ ဘာဟင်းချက်ချင်လဲ?
           </Text>
         </VStack>
       </HStack>
       <Search />
-      <Title title="Categories" />
+      <Title title="အမျိုးအစားများ" />
 
       <Box>
         <FlatList
@@ -40,26 +52,20 @@ export default function HomeScreen() {
           )}
         />
       </Box>
-      <Title title="Products" />
+      <Title title="ပစ္စည်းများ" />
       <FlatList
         data={ProductList}
         renderItem={({ item }) => <Product {...item} />}
         keyExtractor={(item) => item.id.toString()}
-        numColumns={2}
+        numColumns={numColumns}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           rowGap: 10,
           marginTop: 5,
           paddingBottom: 60,
         }}
-        columnWrapperStyle={{ columnGap: 10 }}
+        columnWrapperStyle={{ columnGap: 15 }}
       />
-      {/* <Button className="mx-auto mt-8 h-14 w-[200px] rounded-lg bg-blue-500 text-white">
-        <ButtonText size="lg" className="font-bold">
-          Explore More
-        </ButtonText>
-      </Button> */}
-      {/*  */}
     </SafeAreaView>
   );
 }

@@ -11,14 +11,18 @@ interface TitleProps {
 export default function Title({ title }: TitleProps) {
   return (
     <HStack className="mb-5 mt-6 items-center justify-between">
-      <Text size="2xl" bold className="text-black">
+      <Text size="2xl" bold className="font-poppins leading-[50px] text-black">
         {title}
       </Text>
       <HStack className="items-center">
-        <Text size="lg" bold className="text-orange">
-          View All{" "}
+        <Text
+          size="lg"
+          bold
+          className="font-poppins leading-[30px] text-red-600"
+        >
+          အားလုံးကြည့်ရန်
         </Text>
-        <Icon as={ArrowRightIcon} size="lg" className="text-orange" />
+        <Icon as={ArrowRightIcon} size="lg" className="text-red-600" />
       </HStack>
     </HStack>
   );

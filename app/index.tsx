@@ -40,14 +40,15 @@ export default function onboarding() {
         contentFit="cover"
         transition={1000}
       />
+      <Box className="absolute h-full w-full bg-black/25"></Box>
 
       {/* Overlay & Content */}
-      <Animated.View style={animatedStyles} className="absolute bottom-40">
-        <VStack space="lg">
-          <Text className="text-center text-7xl font-bold text-white">
+      <Animated.View style={animatedStyles} className="absolute bottom-32">
+        <VStack space="4xl" className="items-center">
+          <Text className="font-poppinssemibold text-center text-7xl text-white">
             {`Let’s${"\n"}Cooking`}
           </Text>
-          <Text size="2xl" bold className="text-center text-white">
+          <Text size="2xl" className="text-center font-poppins text-white">
             Find best recipes for cooking
           </Text>
 
@@ -56,7 +57,7 @@ export default function onboarding() {
             className="mx-6 mt-6 h-16 w-[250px] rounded-xl bg-red-600"
             onPress={() => router.push("/(tabs)/(home)")}
           >
-            <ButtonText className="text-xl font-bold text-white">
+            <ButtonText className="font-poppins text-xl font-bold text-white">
               Get Started →
             </ButtonText>
           </Button>

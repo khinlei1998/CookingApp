@@ -1,27 +1,27 @@
 export const CategoryList = [
   {
     id: 1,
-    name: "Breakfast",
+    name: "မနက်စာ",
     image: require("../data/images/breakfast.png"),
   },
   {
     id: 2,
-    name: "Lunch",
+    name: "နေ့လည်စာ",
     image: require("../data/images/lunch.png"),
   },
   {
     id: 3,
-    name: "Dinner",
+    name: "ညစာ",
     image: require("../data/images/dinner.png"),
   },
   {
     id: 4,
-    name: "Snacks",
+    name: "အဆာပြေ",
     image: require("../data/images/snack.png"),
   },
   {
     id: 5,
-    name: "Drinks",
+    name: "အချိုရည်",
     image: require("../data/images/drink.png"),
   },
 ];
@@ -29,7 +29,7 @@ export const CategoryList = [
 export const ProductList = [
   {
     id: 1,
-    name: "Chickern Curry",
+    name: "ကြက်သားဟင်း",
     categoryId: 2,
     ingredient: 5,
     favourite: true,
@@ -39,8 +39,8 @@ export const ProductList = [
   },
   {
     id: 2,
-    name: "Fried Rice",
-    categoryId: 2,
+    name: "ထမင်းကြော်",
+    categoryId: 1,
     ingredient: 5,
     favourite: true,
     description:
@@ -49,7 +49,7 @@ export const ProductList = [
   },
   {
     id: 3,
-    name: "Rice Salad",
+    name: "ထမင်းသုပ်",
     categoryId: 2,
     ingredient: 5,
     favourite: true,
@@ -59,8 +59,8 @@ export const ProductList = [
   },
   {
     id: 4,
-    name: "Fried Noodle",
-    categoryId: 2,
+    name: "ခေါက်ဆွဲကြော်",
+    categoryId: 3,
     ingredient: 5,
     favourite: true,
     description:
@@ -70,17 +70,7 @@ export const ProductList = [
   {
     id: 5,
     name: "Chickern Curry",
-    categoryId: 2,
-    ingredient: 5,
-    favourite: true,
-    description:
-      "Chicken curry is a dish originating from the Indian subcontinent. It is common in the Indian subcontinent, Southeast Asia, Great Britain as well as in the Caribbean.",
-    image: require("../data/images/ChickenFries.jpg"),
-  },
-  {
-    id: 6,
-    name: "Chickern Curry",
-    categoryId: 2,
+    categoryId: 5,
     ingredient: 5,
     favourite: true,
     description:
@@ -90,6 +80,6 @@ export const ProductList = [
 ];
 
 export const product_tabs = [
-  { title: "Details", content: "hg" },
-  { title: "Ingredients", content: "kk" },
+  { id: 1, title: "အသေးစိတ်", content: "hg" },
+  { id: 2, title: "ပါဝင်ပစ္စည်းများ", content: "kk" },
 ];

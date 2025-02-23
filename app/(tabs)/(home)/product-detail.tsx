@@ -8,6 +8,7 @@ import { HStack } from "@/components/ui/hstack";
 import { Text } from "@/components/ui/text";
 import Tab from "@/components/ui/tab";
 import { product_tabs } from "@/data";
+import { FavouriteIcon, Icon } from "@/components/ui/icon";
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
@@ -15,59 +16,30 @@ export default function productDetail() {
   const [activeTab, setActiveTab] = useState("Details");
 
   return (
-    <VStack space="lg" className="flex-1 bg-white">
+    <VStack space="lg" className="flex-1 bg-white px-6">
       <Image
         style={{
           width: "100%",
           height: 300,
+          borderRadius: 20,
+          alignSelf: "center", // Center the image horizontally
         }}
         source={require("../../../data/images/ChickenFries.jpg")}
         placeholder={{ blurhash }}
         contentFit="cover"
         transition={1000}
       />
-      <Heading size="2xl" className="ml-4 mt-3">
-        Fried Chicken
+
+      <Pressable className="absolute right-8 top-6 rounded-md bg-white">
+        <Icon
+          as={FavouriteIcon}
+          className={`m-2 h-5 w-5 fill-red-600 text-red-600`}
+        />
+      </Pressable>
+      <Heading size="xl" className="font-poppinssemibold mt-2 leading-[40px]">
+        ကြက်သားဟင်း
       </Heading>
 
-      {/* <HStack className="m-4 rounded-2xl bg-slate-200 px-3 py-3">
-        <Pressable
-          onPress={() => setActiveTab("Details")}
-          className={`flex-1 ${activeTab === "Details" ? "bg-orange" : ""} items-center justify-center rounded-full p-3`}
-        >
-          <Text
-            size="xl"
-            bold
-            className={`text-center ${activeTab === "Details" ? "text-white" : "text-black"}`}
-          >
-            Details
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={() => setActiveTab("Ingredients")}
-          className={`flex-1 ${activeTab === "Ingredients" ? "bg-orange" : ""} items-center justify-center rounded-full p-3`}
-        >
-          <Text
-            size="xl"
-            bold
-            className={`${activeTab === "Ingredients" ? "text-white" : "text-black"}`}
-          >
-            Ingredients
-          </Text>
-        </Pressable>
-      </HStack>
-
-      <View>
-        {activeTab === "Ingredients" ? (
-          <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-            Ingredients List
-          </Text>
-        ) : (
-          <Text style={{ fontSize: 16, fontWeight: "bold" }}>
-            Instructions Details
-          </Text>
-        )}
-      </View> */}
       <Tab product_tabs={product_tabs} />
     </VStack>
   );
