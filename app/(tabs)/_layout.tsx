@@ -14,17 +14,22 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#E23E3E",
+        tabBarActiveTintColor: "#DC2626",
+        tabBarInactiveTintColor: "#bbbbbb", // Color for inactive tab labels
+        tabBarShowLabel: false,
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: "absolute",
+        // tabBarBackground: TabBarBackground,
+        tabBarStyle:
+          // Platform.select({
+          // ios: {
+          //   // Use a transparent background on iOS to show the blur effect
+          //   position: "absolute",
+          // },
+          // default: {},
+          {
+            backgroundColor: "#fff",
           },
-          default: {},
-        }),
       }}
     >
       <Tabs.Screen
@@ -42,16 +47,16 @@ export default function TabLayout() {
         options={{
           title: "အကြိုက်ဆုံးစာရင်း",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="heart.fill" color={color} />
+            <IconSymbol size={28} name="heart" color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="profile"
         options={{
-          title: "Explore",
+          title: "ကိုယ်ရေးအကျဉ်း",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <IconSymbol size={28} name="person" color={color} />
           ),
         }}
       />
