@@ -18,7 +18,7 @@ import { Box } from "@/components/ui/box";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { FlashList } from "@shopify/flash-list";
-
+import { router } from "expo-router";
 const { width } = Dimensions.get("window");
 const numColumns = width < 600 ? 2 : width < 768 ? 3 : 4;
 
@@ -33,13 +33,18 @@ export default function HomeScreen() {
             size="2xl"
             className="font-poppins font-bold leading-[40px] text-black"
           >
-            {/* {`What would you like \n to cook today?`} */}
-            ဒီနေ့ ဘာဟင်းချက်ချင်လဲ?
+            {`What would you like \n to cook today?`}
+            {/* ဒီနေ့ ဘာဟင်းချက်ချင်လဲ? */}
           </Text>
         </VStack>
       </HStack>
       <Search />
-      <Title title="အမျိုးအစားများ" />
+      <Title
+        title="Categories"
+        onPress={() => {
+          router.navigate("/product-list");
+        }}
+      />
 
       <Box>
         <FlatList
@@ -52,7 +57,12 @@ export default function HomeScreen() {
           )}
         />
       </Box>
-      <Title title="ပစ္စည်းများ" />
+      <Title
+        title="Products"
+        onPress={() => {
+          router.navigate("/product-list");
+        }}
+      />
       <FlatList
         data={ProductList}
         renderItem={({ item }) => <Product {...item} />}

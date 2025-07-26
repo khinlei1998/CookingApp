@@ -83,3 +83,9 @@ export const product_tabs = [
   { id: 1, title: "အသေးစိတ်", content: "hg" },
   { id: 2, title: "ပါဝင်ပစ္စည်းများ", content: "kk" },
 ];
+
+export const darke_mode_data = [
+  { id: 1, title: "On" },
+  { id: 2, title: "Off" },
+  { id: 3, title: "System" },
+];

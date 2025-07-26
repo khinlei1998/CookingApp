@@ -12,8 +12,8 @@ export default function Search() {
         </InputIcon>
       </InputSlot>
       <InputField
-        // placeholder="Search any recipes"
-        placeholder="ချက်ပြုတ်နည်းများကိုရှာပါ"
+        placeholder="Search any recipes"
+        // placeholder="ချက်ပြုတ်နည်းများကိုရှာပါ"
         className="font-poppins text-base font-light"
       />
     </Input>

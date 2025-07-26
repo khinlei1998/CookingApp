@@ -12,7 +12,7 @@ export default function Tab({ product_tabs }: TabProps) {
   const [activeTab, setActiveTab] = useState(product_tabs[0].id);
 
   return (
-    <Box className="flex-1">
+    <Box>
       <HStack className="" space="xl">
         {product_tabs.map((tab) => (
           <Pressable key={tab.title} onPress={() => setActiveTab(tab.id)}>
@@ -20,7 +20,7 @@ export default function Tab({ product_tabs }: TabProps) {
               <Text
                 size="xl"
                 bold
-                className={`font-poppinssemibold text-center leading-10 ${
+                className={`text-center font-poppinssemibold leading-10 ${
                   activeTab === tab.id ? "" : "opacity-50"
                 }`}
               >
