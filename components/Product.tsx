@@ -16,7 +16,7 @@ const blurhash =
 export default function Product({ id, name, categoryId, image }: ProductProps) {
   return (
     <Pressable
-      onPress={() => router.navigate(`/product-detail`)}
+      onPress={() => router.navigate(`/${id}`)}
       className="flex-[0.5] rounded-lg"
       onLayout={(event) => {
         const { width } = event.nativeEvent.layout;
