@@ -8,30 +8,12 @@ import { Icon, ArrowRightIcon } from "@/components/ui/icon";
 import { Image } from "expo-image";
 import { VStack } from "./ui/vstack";
 import { FavouriteIcon } from "@/components/ui/icon";
-import {
-  Button,
-  ButtonText,
-  ButtonSpinner,
-  ButtonIcon,
-  ButtonGroup,
-} from "@/components/ui/button";
-import { CategoryList } from "@/data";
 import { router } from "expo-router";
-
-type ProductProps = {
-  id: number;
-  name: string;
-  categoryId: number;
-  ingredient: number;
-  favourite: boolean;
-  description: string;
-  image: string;
-};
+import { ProductProps } from "@/types";
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
-export default function Product({ id, name, categoryId, image }: ProductProps) {
-  const category = CategoryList.find((category) => category.id === categoryId);
 
+export default function Product({ id, name, categoryId, image }: ProductProps) {
   return (
     <Pressable
       onPress={() => router.navigate(`/product-detail`)}
@@ -59,7 +41,7 @@ export default function Product({ id, name, categoryId, image }: ProductProps) {
         <Text
           size="lg"
           bold
-          className="p-3 text-center font-poppins text-black"
+          className="truncate py-2 text-center font-poppins text-black"
         >
           {name}
         </Text>

@@ -52,6 +52,16 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="reels"
+        options={{
+          title: "Reels",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="video" color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
         name="(profile)"
         options={{
           title: "ကိုယ်ရေးအကျဉ်း",

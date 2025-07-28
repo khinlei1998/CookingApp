@@ -12,7 +12,7 @@ interface TitleProps {
 
 export default function Title({ title, onPress }: TitleProps) {
   return (
-    <HStack className="mb-5 mt-6 items-center justify-between">
+    <HStack className="mb-5 items-center justify-between">
       <Text size="2xl" bold className="font-poppins leading-[50px] text-black">
         {title}
       </Text>

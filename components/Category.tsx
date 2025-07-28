@@ -47,10 +47,10 @@ export default function Category({
           {name}
         </Text>
       </Card> */}
-      <Card className={`rounded-xl ${select === id ? "bg-red-600" : ""}`}>
+      <Card className={`rounded-xl ${select == id ? "bg-red-600" : ""}`}>
         <Text
           size="sm"
-          className={`font-poppins font-medium leading-7 ${select === id ? "text-white" : "text-black"} `}
+          className={`font-poppins font-medium leading-7 ${select == id ? "text-white" : "text-black"} `}
         >
           {name}
         </Text>

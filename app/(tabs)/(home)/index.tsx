@@ -1,32 +1,86 @@
-import {
-  Dimensions,
-  ScrollView,
-  FlatList,
-  View,
-  Pressable,
-} from "react-native";
+import { useEffect, useState } from "react";
+import { Dimensions, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { router } from "expo-router";
+import { Image } from "expo-image";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
 import { HStack } from "@/components/ui/hstack";
 import Search from "@/components/ui/search";
-import { CategoryList, ProductList } from "@/data";
 import Category from "@/components/Category";
 import Title from "@/components/Title";
 import Product from "@/components/Product";
 import { Box } from "@/components/ui/box";
-import { useState } from "react";
-import { Card } from "@/components/ui/card";
-import { FlashList } from "@shopify/flash-list";
-import { router } from "expo-router";
+import { BellIcon, Icon } from "@/components/ui/icon";
+import { useQuery } from "@tanstack/react-query";
+import { API_URL } from "@/api";
+import { ProductProps } from "@/types";
+import { productStore } from "@/store/store";
+
 const { width } = Dimensions.get("window");
 const numColumns = width < 600 ? 2 : width < 768 ? 3 : 4;
 
 export default function HomeScreen() {
   const [select, setSelect] = useState(1);
 
+  const blurhash =
+    "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
+
+  const fetchCategoryList = async () => {
+    const response = await fetch(`${API_URL}/categories`);
+    return response.json();
+  };
+
+  const fetchProductList = async () => {
+    const response = await fetch(`${API_URL}/products`);
+    return response.json();
+  };
+
+  const {
+    isPending: CategoryisPending,
+    isError: CategoryisError,
+    data: CategoryData,
+    error: CategoryError,
+  } = useQuery({
+    queryKey: ["categories"], //caching data by this query key
+    queryFn: fetchCategoryList,
+  });
+
+  const {
+    isPending: ProductisPending,
+    isError: ProductisError,
+    data: ProductData,
+    error: ProductError,
+  } = useQuery({
+    queryKey: ["products"], //caching data by this query key
+    queryFn: fetchProductList,
+  });
+
+  const productFilterByCategory =
+    ProductData?.filter(
+      (product: ProductProps) => product.categoryId == select,
+    ) || [];
+
+  const setProducts = productStore((state) => state.setProducts);
+
+  useEffect(() => {
+    if (ProductData) setProducts(ProductData);
+  }, [ProductData, setProducts]);
+
   return (
     <SafeAreaView className="flex-1 bg-white px-5">
+      <HStack className="items-center justify-between">
+        <Image
+          style={{ width: 40, height: 40 }}
+          source={require("../../../assets/images/profile.png")}
+          placeholder={{ blurhash }}
+          contentFit="cover"
+          transition={1000}
+          className="rounded-full"
+        />
+        <Icon as={BellIcon} size="xl" className="text-red-600" />
+      </HStack>
+
       <HStack className="mt-5 items-center justify-between">
         <VStack>
           <Text
@@ -39,18 +93,16 @@ export default function HomeScreen() {
         </VStack>
       </HStack>
       <Search />
-      <Title
-        title="Categories"
-        onPress={() => {
-          router.navigate("/product-list");
-        }}
-      />
+
+      <Text size="2xl" bold className="font-poppins leading-[50px] text-black">
+        Categories
+      </Text>
 
       <Box>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
-          data={CategoryList}
+          data={CategoryData}
           contentContainerStyle={{ columnGap: 15 }} // Adds space between cards
           renderItem={({ item }) => (
             <Category {...item} select={select} setSelect={setSelect} />
@@ -64,8 +116,8 @@ export default function HomeScreen() {
         }}
       />
       <FlatList
-        data={ProductList}
-        renderItem={({ item }) => <Product {...item} />}
+        data={productFilterByCategory}
+        renderItem={({ item }) => <Product {...item} select={select} />}
         keyExtractor={(item) => item.id.toString()}
         numColumns={numColumns}
         showsVerticalScrollIndicator={false}

@@ -31,6 +31,7 @@
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "@shopify/flash-list": "1.7.6",
+    "@tanstack/react-query": "^5.83.0",
     "babel-plugin-module-resolver": "^5.0.2",
     "expo": "^53.0.20",
     "expo-blur": "~14.1.5",
@@ -45,7 +46,9 @@
     "expo-status-bar": "~2.2.3",
     "expo-symbols": "~0.4.5",
     "expo-system-ui": "~5.0.10",
+    "expo-video": "~2.2.2",
     "expo-web-browser": "~14.2.0",
+    "json-server": "^1.0.0-beta.3",
     "nativewind": "^4.1.23",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -58,7 +61,8 @@
     "react-native-svg": "15.11.2",
     "react-native-web": "^0.20.0",
     "react-native-webview": "13.13.5",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

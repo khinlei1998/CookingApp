@@ -9,6 +9,7 @@ export default function HomeLayout() {
         name="index"
         options={{ title: "Home", headerShown: false }}
       />
+      <Stack.Screen name="product-list" options={{ title: "Products" }} />
     </Stack>
   );
 }

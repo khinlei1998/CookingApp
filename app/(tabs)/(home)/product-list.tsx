@@ -7,11 +7,14 @@ import { Icon, CloseIcon } from "@/components/ui/icon";
 import { HStack } from "@/components/ui/hstack";
 import Product from "@/components/Product";
 import { ProductList } from "@/data";
+import { productStore } from "@/store/store";
 const { width } = Dimensions.get("window");
 
 const numColumns = width < 600 ? 2 : width < 768 ? 3 : 4;
 
 export default function ProductListScreen() {
+  const products = productStore((state) => state.products);
+  console.log("products", products);
   return (
     <View className="flex-1 bg-white px-5">
       <Search />
@@ -34,7 +37,7 @@ export default function ProductListScreen() {
         All Products
       </Text>
       <FlatList
-        data={ProductList}
+        data={products}
         renderItem={({ item }) => <Product {...item} />}
         keyExtractor={(item) => item.id.toString()}
         numColumns={numColumns}
