@@ -1,5 +1,5 @@
 import { View, SafeAreaView } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Box } from "@/components/ui/box";
 import { HStack } from "@/components/ui/hstack";
 import { Image } from "expo-image";
@@ -18,12 +18,16 @@ import {
   AlertDialogHeader,
 } from "@/components/ui/alert-dialog";
 import { Heading } from "@/components/ui/heading";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export default function Profile() {
   const [showAlertDialog, setShowAlertDialog] = useState(false);
+  const { currentTheme } = useContext(ThemeContext);
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView
+      className={`flex-1 ${currentTheme === "dark" ? "bg-black" : "bg-white"}`}
+    >
       <Box className="px-5 py-3">
         {/* <Heading size="2xl"> My Profile</Heading> */}
         <HStack className="items-center justify-between">
@@ -33,7 +37,7 @@ export default function Profile() {
               width: 100,
               height: 100,
             }}
-            source={require("../../../data/images/woman.png")}
+            source={require("../../../assets/images/profile/woman.png")}
             contentFit="cover"
             transition={1000}
           />
@@ -48,7 +52,10 @@ export default function Profile() {
         </HStack>
         <Pressable onPress={() => router.navigate("/language")}>
           <HStack className="my-4 justify-between">
-            <Text size="lg" className="font-semibold">
+            <Text
+              size="lg"
+              className={`font-semibold ${currentTheme === "dark" ? "text-white" : "text-black"}`}
+            >
               Language
             </Text>
             <Icon as={ArrowRightIcon} size="xl" className="text-red-600" />
@@ -57,7 +64,10 @@ export default function Profile() {
         <Divider className="my-2" />
         <Pressable onPress={() => alert("This feature is coming soon!")}>
           <HStack className="my-4 justify-between">
-            <Text size="lg" className="font-semibold">
+            <Text
+              size="lg"
+              className={`font-semibold ${currentTheme === "dark" ? "text-white" : "text-black"}`}
+            >
               Privacy Policy
             </Text>
             <Icon as={ArrowRightIcon} size="xl" className="text-red-600" />
@@ -67,7 +77,10 @@ export default function Profile() {
         <Divider className="my-2" />
         <Pressable onPress={() => router.navigate("/darkmode")}>
           <HStack className="my-4 justify-between">
-            <Text size="lg" className="font-semibold">
+            <Text
+              size="lg"
+              className={`font-semibold ${currentTheme === "dark" ? "text-white" : "text-black"}`}
+            >
               Dark Mode
             </Text>
             <Icon as={ArrowRightIcon} size="xl" className="text-red-600" />
@@ -76,7 +89,10 @@ export default function Profile() {
         <Divider className="my-2" />
         <Pressable onPress={() => alert("This feature is coming soon!")}>
           <HStack className="my-4 justify-between">
-            <Text size="lg" className="font-semibold">
+            <Text
+              size="lg"
+              className={`font-semibold ${currentTheme === "dark" ? "text-white" : "text-black"}`}
+            >
               About App
             </Text>
             <Icon as={ArrowRightIcon} size="xl" className="text-red-600" />
@@ -85,7 +101,10 @@ export default function Profile() {
         <Divider className="my-2" />
         <Pressable onPress={() => setShowAlertDialog(true)}>
           <HStack className="my-4 justify-between">
-            <Text size="lg" className="font-semibold">
+            <Text
+              size="lg"
+              className={`font-semibold ${currentTheme === "dark" ? "text-white" : "text-black"}`}
+            >
               Logout
             </Text>
             <Icon as={ArrowRightIcon} size="xl" className="text-red-600" />

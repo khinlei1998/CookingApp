@@ -1,5 +1,5 @@
 import { View, FlatList, Dimensions } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import Search from "@/components/ui/search";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
@@ -8,18 +8,29 @@ import { HStack } from "@/components/ui/hstack";
 import Product from "@/components/Product";
 import { ProductList } from "@/data";
 import { productStore } from "@/store/store";
+import Title from "@/components/Title";
+import { ThemeContext } from "@/context/ThemeContext";
 const { width } = Dimensions.get("window");
 
 const numColumns = width < 600 ? 2 : width < 768 ? 3 : 4;
 
 export default function ProductListScreen() {
   const products = productStore((state) => state.products);
-  console.log("products", products);
+  const { currentTheme } = useContext(ThemeContext);
+
   return (
-    <View className="flex-1 bg-white px-5">
+    <View
+      className={`flex-1 ${currentTheme == "dark" ? "bg-black" : "bg-white"} px-5`}
+    >
       <Search />
-      <Text className="mt-5 font-poppinssemibold text-lg">Recent Search</Text>
-      <View className="mt-4 gap-y-4">
+      <Text
+        size="xl"
+        bold
+        className={`font-poppins leading-[50px] ${currentTheme == "dark" ? "text-white" : "text-black"}`}
+      >
+        Recent Search
+      </Text>
+      <View className="gap-y-4">
         <HStack className="justify-between">
           <Text className="font-poppins text-gray-500">Tomato</Text>
           <Icon as={CloseIcon} size="lg" className="text-gray-500" />
@@ -33,7 +44,11 @@ export default function ProductListScreen() {
         </HStack>
       </View>
       {/* All Products */}
-      <Text className="mb-3 mt-5 font-poppinssemibold text-lg">
+      <Text
+        size="xl"
+        bold
+        className={`font-poppins leading-[50px] ${currentTheme == "dark" ? "text-white" : "text-black"}`}
+      >
         All Products
       </Text>
       <FlatList

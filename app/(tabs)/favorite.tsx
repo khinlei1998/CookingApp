@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import Search from "@/components/ui/search";
 import { VStack } from "@/components/ui/vstack";
 import { Box } from "@/components/ui/box";
@@ -8,10 +8,14 @@ import { Text } from "@/components/ui/text";
 import { FavouriteIcon, Icon } from "@/components/ui/icon";
 import { Pressable } from "@/components/ui/pressable";
 import { router } from "expo-router";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export default function favorite() {
+  const { currentTheme } = useContext(ThemeContext);
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView
+      className={`flex-1 ${currentTheme == "dark" ? "bg-black" : "bg-white"} `}
+    >
       <Box className="px-5">
         <Search />
         <Pressable

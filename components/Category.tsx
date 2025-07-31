@@ -26,30 +26,9 @@ export default function Category({
   const cardMargin = width * 0.02; // 2% of screen width for margin
 
   return (
-    <Pressable
-      // style={{ margin: cardMargin }} // Set fixed margin for consistent spacing
-      className="mb-3"
-      onPress={() => setSelect(id)}
-    >
-      {/* <Card
-        onLayout={(event) => {
-          const { height, width } = event.nativeEvent.layout;
-          console.log("cardw:", height);
-          console.log("card h :", width);
-        }}
-        className={`rounded-xl bg-cyan-500 ${select === id ? "bg-red-600" : ""}`}
-        key={id}
-        style={{ justifyContent: "center", alignItems: "center" }} // Center content vertically and horizontally
-      >
-        <Text
-          className={`items-center justify-center font-poppins leading-7 text-center${select === id ? "font-medium text-white" : "font-semibold text-red-500"}`}
-        >
-          {name}
-        </Text>
-      </Card> */}
+    <Pressable className="mb-3" onPress={() => setSelect(id)}>
       <Card className={`rounded-xl ${select == id ? "bg-red-600" : ""}`}>
         <Text
-          size="sm"
           className={`font-poppins font-medium leading-7 ${select == id ? "text-white" : "text-black"} `}
         >
           {name}

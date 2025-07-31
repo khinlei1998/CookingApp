@@ -1,5 +1,5 @@
 import { View, Pressable } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import { Card } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import { HStack } from "@/components/ui/hstack";
@@ -10,17 +10,18 @@ import { VStack } from "./ui/vstack";
 import { FavouriteIcon } from "@/components/ui/icon";
 import { router } from "expo-router";
 import { ProductProps } from "@/types";
+import { ThemeContext } from "@/context/ThemeContext";
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
 export default function Product({ id, name, categoryId, image }: ProductProps) {
+  const { currentTheme } = useContext(ThemeContext);
   return (
     <Pressable
       onPress={() => router.navigate(`/${id}`)}
       className="flex-[0.5] rounded-lg"
       onLayout={(event) => {
         const { width } = event.nativeEvent.layout;
-        console.log("Item width:", width);
       }}
     >
       <VStack space="md">
@@ -41,7 +42,7 @@ export default function Product({ id, name, categoryId, image }: ProductProps) {
         <Text
           size="lg"
           bold
-          className="truncate py-2 text-center font-poppins text-black"
+          className={`truncate py-2 text-center font-poppins ${currentTheme == "light" ? "text-black" : "text-white"}`}
         >
           {name}
         </Text>

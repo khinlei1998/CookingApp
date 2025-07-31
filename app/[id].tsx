@@ -1,5 +1,5 @@
 import { View, Pressable, SafeAreaView } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Image } from "expo-image";
 import { VStack } from "@/components/ui/vstack";
 import { Heading } from "@/components/ui/heading";
@@ -11,11 +11,13 @@ import { FavouriteIcon, Icon } from "@/components/ui/icon";
 import Tab from "@/components/ui/tab";
 import { useLocalSearchParams } from "expo-router";
 import { productStore } from "@/store/store";
+import { ThemeContext } from "@/context/ThemeContext";
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
 export default function productDetail() {
   const [activeTab, setActiveTab] = useState("Details");
+  const { currentTheme } = useContext(ThemeContext);
 
   const { id } = useLocalSearchParams();
   const getProducts = productStore((state) => state.products);
@@ -30,7 +32,9 @@ export default function productDetail() {
   } = getProductListById || {};
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView
+      className={`flex-1 ${currentTheme == "dark" ? "bg-black" : "bg-white"}`}
+    >
       <VStack space="lg" className="px-6">
         <Image
           style={{
@@ -51,7 +55,10 @@ export default function productDetail() {
             className={`m-2 h-5 w-5 fill-red-600 text-red-600`}
           />
         </Pressable>
-        <Heading size="xl" className="mt-2 font-poppinssemibold leading-[40px]">
+        <Heading
+          size="xl"
+          className={`mt-2 font-poppinssemibold leading-[40px] ${currentTheme == "dark" ? "text-white" : "text-black"}`}
+        >
           {name}
         </Heading>
 

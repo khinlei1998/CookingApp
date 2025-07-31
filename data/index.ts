@@ -85,7 +85,7 @@ export const product_tabs = [
 ];
 
 export const darke_mode_data = [
-  { id: 1, title: "On" },
-  { id: 2, title: "Off" },
-  { id: 3, title: "System" },
+  { id: "dark", title: "Dark Mode" },
+  { id: "light", title: "Light Mode" },
+  { id: "system", title: "System" },
 ];
