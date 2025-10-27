@@ -80,8 +80,8 @@ export const ProductList = [
 ];
 
 export const product_tabs = [
-  { id: 1, title: "အသေးစိတ်", content: "hg" },
-  { id: 2, title: "ပါဝင်ပစ္စည်းများ", content: "kk" },
+  { id: 1, title: "Description", content: "hg" },
+  { id: 2, title: "Ingredient", content: "kk" },
 ];
 
 export const darke_mode_data = [

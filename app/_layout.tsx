@@ -6,7 +6,6 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useContext, useEffect } from "react";
-import "react-native-reanimated";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ThemeProvider, { ThemeContext } from "@/context/ThemeContext";
 import { useColorScheme } from "@/hooks/useColorScheme";

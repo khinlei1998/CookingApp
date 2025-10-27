@@ -12,6 +12,8 @@ import Tab from "@/components/ui/tab";
 import { useLocalSearchParams } from "expo-router";
 import { productStore } from "@/store/store";
 import { ThemeContext } from "@/context/ThemeContext";
+import { Divider } from "@/components/ui/divider";
+
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
@@ -63,6 +65,8 @@ export default function productDetail() {
         </Heading>
 
         <Tab instructions={instructions} ingredients={ingredients} />
+        <Text>hell</Text>
+        <Divider className="my-2" />
       </VStack>
     </SafeAreaView>
   );

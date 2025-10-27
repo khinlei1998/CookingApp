@@ -17,6 +17,8 @@ import { API_URL } from "@/api";
 import { ProductProps } from "@/types";
 import { productStore } from "@/store/store";
 import { ThemeContext } from "@/context/ThemeContext";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { db } from "@/firebaseConfig";
 
 const { width } = Dimensions.get("window");
 const numColumns = width < 600 ? 2 : width < 768 ? 3 : 4;
@@ -45,7 +47,7 @@ export default function HomeScreen() {
     data: CategoryData,
     error: CategoryError,
   } = useQuery({
-    queryKey: ["categories"], //caching data by this query key
+    queryKey: ["categories"],
     queryFn: fetchCategoryList,
   });
 
@@ -55,7 +57,7 @@ export default function HomeScreen() {
     data: ProductData,
     error: ProductError,
   } = useQuery({
-    queryKey: ["products"], //caching data by this query key
+    queryKey: ["products"],
     queryFn: fetchProductList,
   });
 
@@ -73,7 +75,6 @@ export default function HomeScreen() {
   useEffect(() => {
     if (ProductData) setProducts(ProductData);
   }, [ProductData, setProducts]);
-
   return (
     <SafeAreaView
       style={{ flex: 1, paddingHorizontal: 20 }}

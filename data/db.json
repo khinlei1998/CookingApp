@@ -24,99 +24,123 @@
   "products": [
     {
       "id": 1,
-      "name": "ကြက်သားဟင်း",
+      "name": "Fried Chicken Curry",
       "categoryId": 2,
-      "ingredients": "ကြက်ရင်ပုံသား ......၂၅ ကျပ်သား\nဆား ....အနည်းငယ်\nငရုတ်ကောင်း ....အနည်းငယ်\nခရုဆီ.... အနည်းငယ်\nသကြား.....အနည်းငယ်\nတန်ပူရာမှုန့်....... ထမင်းစားဇွန်း ၅ ဇွန်း\nပြောင်းကော်မှုန့်...... ၁ ဇွန်း\nကြက်ဥ..... ၁ လုံး\nပဲငံပြာရည်..... အနည်းငယ်\nပေါင်မုန့်ခြောက်မှုန့်......လိုသလောက်",
-      "instructions": "ကြက်သားကိုသန်စင့်ပြီး အချောင်းလေးဖြစ်အောင် လှီးထားပါ။ လှီးထားတဲ့ ကြက်သားထဲကို ဆားနှင့် ငရုပ်ကောင်းမှုန့် သကြား ခရုဆီ နယ်ပြီး ရေခဲသေတ္တာထဲ ၁နာရီ နှပ်ထားပါ။ ကြော်ခါနီး ပြောင်းကော်မှုန့် တန်ပူရာမှုန့် ကြက်ဥခေါက်ထည့် ပဲငံပြာရည် ထည့်ပြီ နယ်ထား ပေါင်း မုန့်ခြောက်မှုန့်ကို ပန်းကန်တခုစီ ထည့်ထားပါ။ ကြော်မည့်အိုးထဲကို ဆီထည့် ဆီပူအောင်တည်ထားပါ။ ဆီပူလာလျှင် ကြက်သားကို ပေါင်မုန့်ခြောက် မှုန့်များ အသားမှာ ကပ်အောင်လုပ်ပြီး ဆီပူထဲထည့်ကြော်​ပေးပါ။ အဝါရောင်သန်းလာရင် ဆယ် ဆီစစ်ရင်ရပြီနော် ခရမ်းချဥ်သီးဆောစ့် ငရုပ်သီးဆော့စ် ကြိုက်ရာ သုံးဆောင်ပါရှင် ",
+      "ingredients": "Chicken breast (25 kyat-sized pieces), Salt, Black pepper, Cooking oil, Sugar, Tandoori masala (5 tablespoons), Garam masala (1 tbsp), Egg (1), Soy sauce, Bread crumbs (as needed)",
+      "instructions": "Cut the chicken into small bite-sized pieces. Marinate with salt, pepper, sugar, and a bit of cooking oil, then refrigerate for 1 hour. Just before frying, mix with tandoori masala, garam masala, beaten egg, and soy sauce. Coat with breadcrumbs and deep fry in hot oil until golden. Serve with chili sauce or tamarind dip.",
+      "description": "A popular Indo-Myanmar style deep-fried chicken curry.",
       "favourite": true,
-      "description": "အိန္ဒိယမှာ မူလတည်ထောင်ထားတဲ့ကြက်သားဟင်း။",
-      "image": "https://images.deliveryhero.io/image/fd-mm/LH/hkq0-listing.jpg"
+      "image": "https://www.foodandwine.com/thmb/oUpd2jHdQrtnQUsUoOJvN15nKDA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/201404-xl-curry-fried-chicken-071f7bfe0d4b4ef7832c50a8e8846b66.jpg"
     },
     {
       "id": 2,
-      "name": "ဝက်နံရိုးဟင်းချို",
-      "categoryId": 3,
-      "ingredients": [
-        "နွားနံရိုး 500g",
-        "ကြက်သွန်နီ",
-        "အာလူး",
-        "မုန်လာဥနီ",
-        "ဆားနှင့်ဆီ"
-      ],
-      "instructions": [
-        "နံရိုးကိုချက်ပြီး မနူးမှမထုတ်ပါနဲ့။",
-        "အာလူး၊ မုန်လာဥနီ ထည့်ပါ။",
-        "ကြက်သွန်နီနှင့် ဆီနဲ့အတူ ပြန်တင်ပါ။",
-        "ခပ်ပြင်းပြင်းရနေမှ ပူပြင်းလှအောင်ထုတ်ပါ။"
-      ],
-      "favourite": false,
-      "description": "ဟင်းချိုအမျိုးအစားဖြစ်ပြီး နွားနံရိုးအသားတွေနဲ့ချက်ထားတယ်။",
-      "image": "https://myfoodmyanmar.com/wp-content/uploads/2019/10/Pork-Rib-Soup-with-Daikon-14.jpg"
+      "name": "Mohinga",
+      "categoryId": 1,
+      "ingredients": "Rice noodles, Catfish, Lemongrass, Banana stem, Fish sauce, Chickpea flour, Onion, Garlic, Turmeric, Chili flakes",
+      "instructions": "Boil catfish with lemongrass and banana stem to make broth. Fry onion, garlic, turmeric, and chili flakes. Mix with chickpea flour and broth. Simmer, then add fish sauce and rice noodles. Serve hot with garnishes.Boil catfish with lemongrass and banana stem to make broth. Fry onion, garlic, turmeric, and chili flakes. Mix with chickpea flour and broth. Simmer, then add fish sauce and rice noodles. Serve hot with garnishes.Boil catfish with lemongrass and banana stem to make broth. Fry onion, garlic, turmeric, and chili flakes. Mix with chickpea flour and broth. Simmer, then add fish sauce and rice noodles. Serve hot with garnishes.",
+      "description": "Myanmar’s national breakfast dish, made with rice noodles and fish soup.",
+      "favourite": true,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHTKn4cCQ-UkF3gUyrE8aiSt0K6Ln6zSv6g&s"
     },
     {
       "id": 3,
-      "name": "ငါးကြော်",
-      "categoryId": 2,
-      "ingredients": [
-        "ငါးတစ်ကောင်",
-        "ငရုပ်သီးမှုန့်",
-        "အုန်းဆီ",
-        "ဆား",
-        "အကြော်မှုန့်"
-      ],
-      "instructions": [
-        "ငါးကိုပွတ်ပြီး သန့်ရှင်းအောင်ဆေးပါ။",
-        "အကြော်မှုန့်နှင့် ငရုပ်သီးမှုန့်နှောပါ။",
-        "ဆီပူနေသည့်အခါငါးထည့်ကြော်ပါ။",
-        "အနံ့စုံပေါ်လာသည်အထိကြော်ပါ။"
-      ],
-      "favourite": true,
-      "description": "နေ့လည်စာအတွက် မသင့်တော်မဖြစ်နိုင်တဲ့ ဟင်းလျာတစ်ခုပဲဖြစ်တယ်။",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5YVco_OP35yyqJCoxvUjoJ3F2x_essJtQBg&s"
+      "name": "Shan Noodles",
+      "categoryId": 3,
+      "ingredients": "Flat rice noodles, Chicken or pork, Soybean paste, Garlic oil, Pickled mustard, Spring onion",
+      "instructions": "Boil the noodles and prepare meat with soybean paste and garlic oil. Toss together with pickles and spring onions. Serve dry or with broth.",
+      "description": "A traditional noodle dish from Shan State served dry or with soup.",
+      "favourite": false,
+      "image": "https://images.deliveryhero.io/image/fd-mm/LH/htun-listing.jpg"
     },
     {
       "id": 4,
-      "name": "ဟင်းရွက်ဟင်းသုပ်",
-      "categoryId": 1,
-      "ingredients": ["နံနံပင်", "ပဲတီ", "ကြက်သွန်ဖြူ", "ပဲဆီ", "အချိုမှုန့်"],
-      "instructions": [
-        "ဟင်းရွက်များကိုပြုတ်ပြီး ချောချောမွှေပါ။",
-        "ကြက်သွန်ကြော်ထည့်ပါ။",
-        "ပဲတီများနှင့်အတူ ပေါင်းပြီးသုပ်ပါ။",
-        "အချိုမှုန့်နဲ့တင်ပြပြီးစားနိုင်ပါပြီ။"
-      ],
+      "name": "Tea Leaf Salad",
+      "categoryId": 4,
+      "ingredients": "Fermented tea leaves, Peanuts, Garlic, Tomato, Cabbage, Lime, Dried peas, Sesame seeds",
+      "instructions": "Mix fermented tea leaves with all crunchy ingredients and fresh veggies. Squeeze lime and toss well. Serve as a salad or snack.",
+      "description": "A tangy and crunchy fermented tea leaf salad, known as Lahpet Thoke.",
       "favourite": false,
-      "description": "မနက်စာအတွက် နံနံပင်၊ ဟင်းရွက်များနဲ့ရောထားတဲ့ သန့်ရှင်းအေးမြတဲ့ဟင်းသုပ်။",
-      "image": "https://myfoodmyanmar.com/wp-content/uploads/2019/05/nicoise-inspired-vegan-salad-feature-image.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO1PV2r3saTF05lywbFrQu_xEqdXdvWXmGiQ&s"
     },
     {
       "id": 5,
-      "name": "ကွေ့တီယိုသုပ်",
-      "categoryId": 4,
-      "ingredients": "",
-      "instructions": "ကြက်အရိုး သို့ ဝက်အရိုးကို ကြက်သွန်ဖြူ အခွံခွာထားသောမုန်လာဥဖြူ ၂ လုံး ငရုတ်ကောင်းမှုန့် နံနံပင်အမြစ် ပဲငံပြာရည်အကြည် ခရုဆီ သကြား နှင့် ဆား အနည်းငယ် ထည့်ပြီး ၁နာရီခွဲခန့်ပြုတ်ပေးရပါမယ်။ 👉🏻အပေါ်မှ ဝေ့တက်လာတဲ့ အနှစ်ဖတ်အမည်းများကို ခပ်ထုပ်ပေးပါ။ ပြီးမှနှစ်သက်ရာ ပုဇွန် ပဲသွေး ကြက်သားလုံး ဝက်သားလုံး ငါးဖယ်လုံး များကို ထည့်ပြုတ်ပါ။ 👉🏻ကန်စွန်းရွက် ဆလက်ရွက် ပဲပင်ပေါက် အစိမ်းနံ့ပျောက်စေရန် တို့ကို ရေနွေးဖျောပေးထားပါ။ ကွေ့တီယိုခေါက်ဆွဲကို အရိုးပြုတ်ရည်ထဲ၂မိနစ်ခန့်ပြုတ်ပြီး ပြန်ဆယ်ထားပါ ( အသားပြုတ်ရည်ကောင်းမှ ပြုတ်မယ့် ခေါက်ဆွဲအရသာကောင်းမှာပါ ) အရမ်းပျော့နေအောင်ပြုတ်ဖို့မလိုပါဖူး။ 👉🏻🥣ပြင်ဆင်ပုံကတော့ ..... ပန်းကန်ထဲသို့ ကွေ့တီယိုခေါက်ဆွဲ အရွက်များ အသားလုံးများ ထည့်ပါ။ ပဲငံပြာရည်အကျဲ ငရုတ်သီးမှုန့် ထောင်းထားသောမြေပဲလှော်မှုန့် ငံပြာရည် ငရုတ်ကောင်းမှုန့် ဆီချက် နှင့် အရသာမှုန့် ထည့်နယ်ပါ။ (အရောင်မဲသွားတ",
-      "description": "",
-      "image": "https://www.yangondirectory.com/custom/domain_1/image_files/sitemgr_photo_1559.jpg"
+      "name": "Tofu Nway",
+      "categoryId": 3,
+      "ingredients": "Shan tofu, Rice noodles, Garlic oil, Ground meat, Chili oil, Spring onions",
+      "instructions": "Cook Shan-style tofu and serve hot over noodles with garlic oil, meat, and chili. Top with herbs.",
+      "description": "A warm tofu noodle dish popular in northern Myanmar.",
+      "favourite": true,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1d46S0Jw5B3xxg3_2Y-Bu0A1aapFyxEWSg&s"
     },
     {
       "id": 6,
-      "name": "ကြာဇံချက်",
-      "categoryId": 1,
-      "ingredients": "",
-      "instructions": "ကြက်ရိုးတစ်ကောင်နဲ့ ကြက်ရင်အုံသားလေးတစ်ခုကို ဂျင်းတစ်ပြားလောက် ထုထောင်းထည့်ပြီးညး ဆားအနည်းငယ် ရေကြက်သားမြုတ်အောင်ထည့်ပြီ ပြုတ်ထားလိုက်တယ်။\nပဲလိပ် ကြွက်နာရွက်မှိုနဲ့ ပဲကြာဇံတွေ ရေစိမ်ထားတယ်။\nမိနစ်နှစ်ဆယ်လောက်ကြာတော့ ကြက်ရင်အုံသားလေးကိုပြုတ်ထားတာကနေ ဆယ်ယူအအေးခံပြီးအသားနွှင်းပါ။\nပြီးရင်ကြက်သားတွေကို ကြက်သွန်ဖြူ ငရုပ်သီးအရောင်တင်မှုန့်ရောထောင်းထားတာလေးနဲ့ ဆီသတ်ပါ။\nမွေးလာတာနဲ့ ကြက်ပြုတ်ရည်အိုးထဲ ရောထည့်ပါ။\nရေနည်းနေရင် ရေထပ်ထည့်ပါ။\nမှိုနဲ့ ပဲလိပ်တွေလှီးပြီးထည့်။\nကြက်သွန်နီအလုံးလိုက်လေး နည်းနည်းထည့်ပါ။\nအရသာအတွက် ကြက်သားမှုန့်၊ သကြား၊ ဆားကို အနည်းအများပေါ်မူတည်ပြီး ချိန်ထည့်ပါ။\nပြီးမှ ရေစိမ်ထားတဲ့ကြာဇံထည့်ပြီး ငရုပ်ကောင်းနဲ့ ကြက်သွန်ဖြူလေးထောင်းထည့်ပြီး အရသာလေးပြန်မြည်းကြည့်ပါ။",
-      "favourite": true,
-      "description": "အိန္ဒိယမှာ မူလတည်ထောင်ထားတဲ့ကြက်သားဟင်း။",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6GhTk98rOwY7C1H9P73f715V2mQptfkNMbXVlP8ODkcCSxGkVFesZL63mFSrMLUe99BXXDQ2AYoNEdRtcZcPPM7_NEaHnIU7tmOGP05On7CN4Af2N0HIZB5fo9OcSD-0FTN1zohuABMsDjL_BuPrHS9HgaVxSVqcDtqhyphenhyphenGuI6tI3sbtL_0sO657TQ0Ws/s1783/CYMERA_20240417_174914.jpg"
+      "name": "Coconut Noodle Soup",
+      "categoryId": 2,
+      "ingredients": "Rice noodles, Coconut milk, Chicken, Onion, Garlic, Turmeric, Boiled egg, Crispy noodles",
+      "instructions": "Make broth with coconut milk, turmeric, and chicken. Pour over boiled noodles. Top with egg and crispy noodles.",
+      "description": "A creamy coconut chicken noodle soup known as Ohn No Khao Swe.",
+      "favourite": false,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn4bJ21tqvKG--A1jmPHD7LbLFO6Zd0ONYBA&s"
     },
     {
       "id": 7,
-      "name": "ကြက်သားဆီချက်",
-      "categoryId": 1,
-      "ingredients": "",
-      "instructions": "ကြက်သားကို အရေခွံခွာပြီး ကြက်သွန်ဖြူ  ဂျင်း ဆား သကြား နံနံမြစ်ထည့်ပြီး ပြုတ်ပါတယ်\nအမြှုပ်တွေခပ်ထုတ် \nကြက်သားကျက်ရင် အသားတွေ နွှာထားပါ\nကြက်အရေခွံကို ဆီထည့်ပြီး  မီးအေးအေးနဲ့ ကြော်ပါ \nကြက်ဆီအနံ့ မွှေးလာရင် ကြက်အရေခွံတွေထုတ်ပြီ\nကြက်သွန်ဖြူ ထည့်ကြော်မယ် \nဆီချက်ရပြီဆို \nခေါက်ဆွဲကို ပြုတ်ပါမယ် ရေဆူဆူထဲ ၃မိနစ် ၄မိနစ်လောက်ပြုတ်ပြီ \nပြန်ဆယ် ခေါက်ဆွဲပူနေတဲ့အချိန် ခနက ကြက်ဆီအနံ့ ဆီချက်လေးနဲ့နယ်ပါမယ် တပွဲစာဆို ၂ဇွန်း ၃ဇွန်းလောက်ထည့်မယ်\nကြက်သားမှုန့် ဆား သကြားအနည်းငယ် ပဲငံပြာရည် ရောနယ် \nကြက်သားနွှာထားတာလေးနဲ့\n ကြက်သွန်မြိတ်  ကြက်သွန်ဖြူဆီချက် ငရုပ်ကောင်းမှုန့်  အပေါ်ကနေ ဖြူးလိုက်ရင် ​အရမ်းမွှေးတဲ့ ကြက်သားဆီချက်လေးရပါပြီ",
+      "name": "Fried Spring Rolls",
+      "categoryId": 4,
+      "ingredients": "Spring roll wrappers, Mixed vegetables, Soy sauce, Pepper, Oil for frying",
+      "instructions": "Stir-fry the filling, wrap in spring roll wrappers, and deep fry until golden. Serve with sweet chili sauce.",
+      "description": "Crispy snack filled with vegetables and spices.",
       "favourite": true,
-      "description": "",
-      "image": "https://i.pinimg.com/736x/71/cf/de/71cfdec235675af3ec36d0e1f67b5c39.jpg"
+      "image": "https://chickenofthesea.com/wp-content/uploads/2022/06/food-service-recipes-Crispy-Fried-Crab-Spring-Rolls-1440x1200.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Milk Tea",
+      "categoryId": 5,
+      "ingredients": "Black tea, Condensed milk, Evaporated milk, Sugar",
+      "instructions": "Brew strong tea. Add condensed and evaporated milk. Stir and serve hot or iced.",
+      "description": "Sweet Myanmar-style milk tea often served in tea shops.",
+      "favourite": true,
+      "image": "https://asianinspirations.com.au/wp-content/uploads/2020/07/R02665_Hot_Thai_Milk_Tea.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Sticky Rice with Coconut",
+      "categoryId": 2,
+      "ingredients": "Sticky rice, Coconut cream, Sugar, Salt, Sesame seeds",
+      "instructions": "Steam sticky rice. Mix coconut cream with sugar and salt, then pour over rice. Top with sesame seeds.",
+      "description": "A sweet breakfast or dessert made from coconut and glutinous rice.",
+      "favourite": false,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXnv4aiEkYDuPvCLmbOsbcgsPl7SHlQ3y4Mg&s"
+    },
+    {
+      "id": 10,
+      "name": "Fried Tofu Snack",
+      "categoryId": 4,
+      "ingredients": "Chickpea tofu, Oil, Garlic, Tamarind sauce",
+      "instructions": "Slice tofu, deep fry until golden. Serve with garlic and tamarind dipping sauce.",
+      "description": "Simple and crispy fried tofu pieces for a snack.",
+      "favourite": false,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoe3YmTmEjAMfXiNXVP18I9-eunhnRm0ybrg&s"
+    },
+    {
+      "id": 11,
+      "name": "Nan Gyi Thoke",
+      "categoryId": 1,
+      "ingredients": "Thick rice noodles, chicken curry, boiled egg, onions, chickpea flour, lime, coriander",
+      "instructions": "Mix noodles with chicken curry sauce. Add sliced egg, onions, and chickpea flour. Garnish with coriander and lime.",
+      "favourite": true,
+      "description": "Spicy noodle salad served as breakfast in Myanmar.",
+      "image": "https://lh3.googleusercontent.com/r0N_yFY64RtBa7s-Qvmfw50rBQ-DFfqRL0TSiugZn5gq-zUOQPdsXnaNofVe2f8H4FFBtNtrHpdxldMdh7zmJnFnjWTu55h2FXVrVCR0xxsKakC2EF0ORnmcrR2d28YvYf8uv5Ku"
+    },
+    {
+      "id": 12,
+      "name": "Pe Byouk with Paratha",
+      "categoryId": 1,
+      "ingredients": "Boiled peas, onions, garlic, turmeric, salt, oil, paratha (flatbread)",
+      "instructions": "Cook the peas until soft with turmeric, garlic, and onions. Mash slightly and season with salt. Serve warm with crispy paratha.",
+      "favourite": false,
+      "description": "A classic Burmese breakfast of mashed peas served with flaky paratha.",
+      "image": "https://1.bp.blogspot.com/-gMX_A1Ne10I/Vf_KVDFutCI/AAAAAAAAT5s/nOC4MYJQmBk/s1600/Naan%2Bwith%2BPe%2BByouk.jpg"
     }
   ]
 }

@@ -46,6 +46,19 @@ export default function TabLayout() {
           },
         }}
       />
+      <Tabs.Screen
+        name="discover"
+        options={{
+          title: "Discover",
+
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="magnifyingglass" color={color} />
+          ),
+          tabBarLabelStyle: {
+            fontFamily: "Poppins",
+          },
+        }}
+      />
 
       <Tabs.Screen
         name="favorite"
@@ -61,7 +74,7 @@ export default function TabLayout() {
           },
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="reels"
         options={{
           title: "Reels",
@@ -73,7 +86,7 @@ export default function TabLayout() {
             fontFamily: "Poppins",
           },
         }}
-      />
+      /> */}
 
       <Tabs.Screen
         name="(profile)"

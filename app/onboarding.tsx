@@ -16,10 +16,8 @@ import { Animated } from "react-native";
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 const { width, height } = Dimensions.get("window");
-console.log("width", width);
-console.log("height", height);
 
-export default function onboarding() {
+export default function Onboarding() {
   const fadeAnim = useAnimatedValue(0); // Initial value for opacity: 0
 
   const fadeIn = () => {

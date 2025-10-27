@@ -10,7 +10,7 @@ import { ProductList } from "@/data";
 import VideoPlay from "@/components/VideoPlay";
 import { VideoView, VideoSource, useVideoPlayer } from "expo-video";
 
-export default function Reels() {
+export default function Discover() {
   const videoSource = [
     {
       id: 1,

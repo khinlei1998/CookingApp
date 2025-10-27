@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Heading } from "@/components/ui/heading";
 import { ThemeContext } from "@/context/ThemeContext";
-
+import { Globe } from "lucide-react-native";
 export default function Profile() {
   const [showAlertDialog, setShowAlertDialog] = useState(false);
   const { currentTheme } = useContext(ThemeContext);
