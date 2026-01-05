@@ -13,9 +13,7 @@ export default function Search({ setSearchValue, searchValue }: SearchProps) {
   return (
     <Input size="xl" className="mt-4 h-16 rounded-2xl">
       <InputSlot className="ml-4">
-        <InputIcon as={SearchIcon} className="bg-white text-red-600">
-          {/* Some Icon Component */}
-        </InputIcon>
+        <InputIcon as={SearchIcon}>{/* Some Icon Component */}</InputIcon>
       </InputSlot>
       <InputField
         placeholder="Search any recipes"

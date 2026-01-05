@@ -62,7 +62,7 @@ export default function Onboarding() {
           <Button
             size="lg"
             className="mx-6 mt-6 h-16 w-[250px] rounded-xl bg-red-600"
-            onPress={() => router.navigate("/login")}
+            onPress={() => router.push("/(tabs)/(home)")}
           >
             <ButtonText className="font-poppins text-xl font-bold text-white">
               Get Started →

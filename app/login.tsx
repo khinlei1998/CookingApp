@@ -15,7 +15,6 @@ import { ArrowLeftIcon } from "lucide-react-native";
 import { Heading } from "@/components/ui/heading";
 import { Image } from "expo-image";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
@@ -34,8 +33,8 @@ export default function Login() {
       <Center>
         <Image
           style={{
-            width: "30%",
-            height: 100,
+            width: 130,
+            height: 130,
             borderRadius: 20,
           }}
           source={require("../assets/images/2.png")}
@@ -46,14 +45,19 @@ export default function Login() {
       </Center>
       {/* <Center> */}
       <Box className="p-5">
-        <VStack space="xl" className="py-2">
-          <Input>
-            <InputField className="py-2" placeholder="New password" />
-          </Input>
-          <Input>
-            <InputField className="py-2" placeholder="Confirm new password" />
+        <VStack space="md">
+          <Text>Email Address</Text>
+          <Input size="xl" variant="rounded">
+            <InputField placeholder="New password" />
           </Input>
         </VStack>
+        <VStack space="md">
+          <Text>Email Address</Text>
+          <Input size="xl" variant="rounded">
+            <InputField placeholder="Confirm new password" />
+          </Input>
+        </VStack>
+
         <VStack space="lg" className="pt-4">
           <Button size="xl" className="rounded-full p-2">
             <ButtonText>Sign In</ButtonText>
